@@ -1,0 +1,22 @@
+<% layout('layout/boilerplate.ejs') %>
+<form action="/add" method="post">
+    <div class="form name">
+        <label for="name">Name:</label>
+        <input type="text" name="song[name]" placeholder="Name of The song" id="name"  required> 
+    </div>
+    <div class="form singer">
+        <label for="singer">Singer:</label>
+        <input type="text" name="song[singer]" placeholder="Name of The Singer" id="singer" required>
+    </div>
+    <div class="form file">
+        <label for="music">URL</label>
+        <input type="text" name="song[url]" placeholder="URL of the Music" id="music" required>
+    </div>
+    <div>
+        <label for="desc">Description</label>
+        <textarea name="song[desc]" id="desc" cols="30" rows="1" required></textarea>
+    </div>
+    <label for="image">URL</label>
+    <input type="text" name="song[image]" placeholder="URL of the Image" id="image" required>
+    <button>Submit</button>
+</form>

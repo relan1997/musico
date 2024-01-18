@@ -1,0 +1,31 @@
+<% layout('layout/boilerplate.ejs') %>
+
+<form action="/register" method="post">
+    <div class="credentials">
+    <div id="register">
+        <h1>Login</h1>
+        <div class="name">
+            <label for="name"></label>
+            <input type="text" id="name" name="username" placeholder="Enter Username" required>
+        </div>
+        <div class="email">
+        <label for="email"></label>
+        <input type="text" name="user[email]" id="email" place required>
+    </div>
+        <div class="password">
+            <label for="password"></label>
+            <input type="password" name="password" id="password" placeholder="Enter Password"  required>
+        </div>
+        <div class="btn">
+            <button>Submit</button>
+        </div>
+        </div>
+        <div class="promo">
+            <img src="/images/backgroundGIF.gif" alt="">
+            <h1>Elevate your soul <span>with Musico</span></h1>
+            <p>Your personalized symphony in the palm of your hand. Explore curated playlists, discover new beats, and tailor your musical journey with precision. Elevate every moment, one note at a time, with Musico – where your music, your way, takes center stage</p>
+        </div>
+    </div>
+</form>
+
+

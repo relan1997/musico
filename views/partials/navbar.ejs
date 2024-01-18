@@ -1,0 +1,15 @@
+<div class="navbar">
+    <div class="left">
+    <div class="logo"><img src="/images/app_logo2.png" alt=""></div>
+    <div class="home"><a href="/play">Home</a></div>
+    <!-- <div class="playlist"></div> -->
+    </div>
+    <div class="right">
+        <% if(!currentUser) { %>
+        <a href="/login"><div class="login">Login</div></a>
+        <a href="/register"><div class="register">Register</div></a>
+        <% } else { %>
+        <a href="/logout"><div class="logout">Logout</div></a>
+        <% } %>
+    </div>
+</div>

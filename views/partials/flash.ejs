@@ -1,0 +1,21 @@
+<% if(success && success.length) { %>
+
+    <div class="flash success">
+        <div class="text">
+            <%= success %>
+        </div>
+    </div>
+
+<% } %>
+<% if(error && error.length) { %>
+
+    <div class="flash error">
+        <i class="fa-solid fa-circle-xmark"></i>
+        <div class="text">
+            <%= error %>
+        </div>
+    </div>
+
+<% } %>
+<script src="/javascripts/flash.js"></script>
+
