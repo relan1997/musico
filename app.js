@@ -63,6 +63,9 @@ app.use((req,res,next)=>{
     next();
 })
 
+app.get('/',async (req,res)=>{
+    res.render('home');
+})
 
 app.use('/',userRoutes);
 app.use('/play',musicRoutes);

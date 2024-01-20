@@ -2,14 +2,14 @@
 <% layout('layout/boilerplate.ejs') %>
 <div class="index">
 <% for(let s of song) {%>
-    <div class="item">
+    <div class="item"><a href="/play/<%= s._id %>">
         <div class="image">
             <img src="<%= s.songImg %>" alt="">
         </div>
         <div class="text">
-        <h2><a href="/play/<%= s._id %>"><%= s.name %></a></h2>
+        <h2><%= s.name %></h2>
         </div>
-        <h3>By <%= s.singer %></h3>
-    </div>
+        <a href="/"><div class="play-div"><i class="fa-solid fa-play play-button"></i></div></a>
+    </a></div>
 <% } %>
 </div>
