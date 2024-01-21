@@ -4,6 +4,8 @@ let progress=document.getElementById('progress');
     let nextSong=document.getElementById('nextSong');
     let prevSong=document.getElementById('prevSong');
 
+    songEle.play();
+
     songEle.onloadedmetadata = function(){
         progress.max=songEle.duration;
         progress.value=songEle.currentTime;

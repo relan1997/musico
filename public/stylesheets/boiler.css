@@ -2,7 +2,7 @@
  */
 
 body{
-    overflow: hidden;
+    
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
@@ -10,10 +10,11 @@ body{
     flex-direction: column;
     background-color: #171717;
     color: white;
-}
+}   
 .navbar{
-    flex-basis: 100%;
-    flex-shrink: 1;
+    /* flex-basis: 100%; */
+    /* flex-shrink: 1; */
+    width: 100%;
     display: flex;
     height: 70px;
     justify-content: space-between;
@@ -37,34 +38,53 @@ body{
 }
 .navbar div{
     margin: auto 0;
-    flex-shrink: 1;
+    /* flex-shrink: 1; */
 }
 .navbar>div{
-    padding:0.3em;
+    /* padding:0.3em; */
 }
 .left{
     display: flex;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
     margin:0 1em;
-    flex-shrink: 1;
+    /* flex-shrink: 1; */
 }
 .left div{
     text-align: left;
-    flex-shrink: 1;
+    padding-left: 20px;
+    /* flex-shrink: 1; */
 }
 .left div:nth-of-type(2), .left div:nth-of-type(3){
-    flex-grow: 1;
-    margin: 0.5em 1em;
+    /* flex-grow: 1; */
+    /* margin: 0.5em 1em; */
 }
 .right{
     display: flex;
-    justify-content: flex-end;
-    flex-shrink: 1;
+    /* justify-content: flex-end; */
+    /* flex-shrink: 1; */
 }
 .right div{
     margin:0 1em;
-    text-align: right;
-    flex-shrink: 1;
+    /* text-align: right; */
+    /* flex-shrink: 1; */
+}
+@media (max-width:470px) {
+    .home{
+        display: none;
+    }
+    .right div{
+        margin:0 0.2em;
+        /* text-align: right; */
+        /* flex-shrink: 1; */
+    }
+    div.register,div.logout{
+        margin-right:1rem
+    }
+}
+@media(max-width:310px){
+    .navbar{
+        font-size: 1.3em;
+    }
 }
 .play{
     width:100px;
@@ -75,15 +95,15 @@ body{
 }
 .index{
     box-sizing: border-box;
-    margin-top:50px;
     display:flex;
     width:80%;
+    height: 100%;
     margin:auto;
     justify-content: space-around;
     flex-wrap: wrap;
     font-size:10px;
     align-items: flex-end;
-    margin-top: 80px;
+    margin-top: 100px;
     gap:2em;
 }
 .item{
@@ -92,12 +112,11 @@ body{
     padding:10px ;
     display: flex;
     flex-direction: column;
-    flex-basis:10rem;
+    /* flex-basis:10rem; */
     height: 250px;
-    border: 3px solid  #FF4D00;
     border-radius: 1rem;
     text-align: center;
-    background-image: linear-gradient(0deg,#000000,#171717,#FF4D00);
+    background-color: #000000
 }
 .item a{
     text-decoration: none;
@@ -116,7 +135,7 @@ body{
 .play{
     box-sizing: border-box;
     float: left;
-    margin-top: 70px;
+    margin-top: 100px;
     margin-left:2%;
     padding: 1%;
     padding-bottom: 0;
@@ -126,6 +145,7 @@ body{
     align-items: center ;
     height: 80%;
     background-color: #171717;
+    font-family: "Roboto";
 }
 .play h1,h2{
     margin: 5px;
@@ -143,7 +163,7 @@ body{
     float: right;
     width: 40%;
     height: 80%;
-    margin-top: 70px;
+    margin-top: 100px;
     margin-right:3%;
     line-height: 1.8rem;
     font-size: 1.3rem;
@@ -157,9 +177,9 @@ body{
     width: 100%;
     justify-content: center;
     align-items: center;
-    margin-top:70px;
+    margin-top:120px;
 }
-#register{
+.login{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     width:30%;
@@ -171,10 +191,14 @@ body{
     background-color: black;
     border-right:10px solid #fff ;
     border-radius: 1.5rem 0 0 1.5rem;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+             1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+             color:#000000;
+             font-size: 2em;
+             font-family: "Tektur";
 }
-#register div{
+.login div{
     font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
     margin: auto;
     margin-top: 0;
     margin-bottom: 0;
@@ -182,7 +206,7 @@ body{
     width: 80%;
     height: 20%;
 }
-#register input{
+.login input{
     font-family: 'Roboto', sans-serif;
     width:70%;
     height: 20px;
@@ -198,15 +222,15 @@ input::-ms-input-placeholder {
     color: #fff;
   }
 
-#register button{
+.login button{
     font-family: 'Roboto', sans-serif;
     margin: 0;
     color: #fff;
 }
-#register label{
+.login label{
     margin-bottom: 12px;
 }
-#register button{
+.login button{
     background: none;
     border: 5px solid #fff;
     width:100px;
@@ -217,11 +241,11 @@ input::-ms-input-placeholder {
     transform: scale(1.02);
     transition: 0.25s;
 }
-#register button:hover{
+.login button:hover{
     transform: scale(1);
     box-shadow: none;
 }
-#register > h1{
+.login > h1{
 margin-top: 0;
 margin-bottom: 40px;
 }
@@ -263,6 +287,23 @@ margin-bottom: 40px;
     line-height: 1.8;
     text-align: left;
     font-family: 'Roboto', sans-serif;
+}
+#register div{
+    height: 18%;
+}
+@media(max-width:877px){
+    .promo{
+        display: none;
+    }
+    .login{
+        border: 2px solid #fff;
+        border-radius: 1rem;
+        width:75%;
+        background-image: url('../images/backgroundGIF.gif');
+        background-size:cover ;
+       
+    }
+    
 }
 #error{
     box-sizing: border-box;
@@ -351,6 +392,7 @@ nav .circle{
     background:#FF4D00;
     cursor: pointer;
     margin: 20px auto;
+    margin-top:15px;
 }
 #progress::-webkit-slider-thumb{
     -webkit-appearance : none;
@@ -407,7 +449,7 @@ nav .circle{
     animation: btn-animate;
     animation-timing-function: ease-in;
     animation-delay: 0.2s;
-    animation-duration: .15s;
+    animation-duration: .1s;
     animation-fill-mode: forwards;
 }
 @keyframes btn-animate{

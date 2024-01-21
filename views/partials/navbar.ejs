@@ -1,12 +1,12 @@
 <div class="navbar">
     <div class="left">
-    <div class="logo"><img src="/images/app_logo2.png" alt=""></div>
+    <div class="logo"><a href="/"><img src="/images/app_logo2.png" alt=""></a></div>
     <div class="home"><a href="/">Home</a></div>
     <div class="playlist"><a href="/play">Play</a></div>
     </div>
     <div class="right">
         <% if(!currentUser) { %>
-        <a href="/login"><div class="login">Login</div></a>
+        <a href="/login"><div class="login-btn">Login</div></a>
         <a href="/register"><div class="register">Register</div></a>
         <% } else { %>
         <a href="/logout"><div class="logout">Logout</div></a>
