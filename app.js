@@ -79,7 +79,7 @@ app.post('/add',catchAsync(async(req,res)=>{
     const {name,singer,url,desc,image} = req.body.song;
     const song=new music({name:name,singer:singer, songURL:url ,songImg:image, description:desc});
     await song.save();
-    res.redirect('/home');
+    res.redirect('/play');
 }))
 
 
